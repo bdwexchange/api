@@ -137,7 +137,7 @@ public class demo {
                 "a4d1bb15-****-****-****-1bb11360af81");
         System.out.println(sin);
         Map<String, String> params = new TreeMap<>() ;
-        params.put("accessKeyId","fa922d49-4247-43f4-8b6e-3bfd95392918");
+        params.put("accessKeyId","fa922d49-****-****-****-3bfd95392918");
         params.put("signatureMethod",SIGNATURE_METHOD);
         params.put("signatureVersion",SIGNATURE_VERSION);
         params.put("timestamp",timeStamp);
