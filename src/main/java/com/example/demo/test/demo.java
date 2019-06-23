@@ -82,7 +82,7 @@ public class demo {
         params.put("signatureVersion",SIGNATURE_VERSION);
         params.put("timestamp",timeStamp);
         params.put("signature",sin);
-        String ss = HttpRequestUtil.URLGet("https://manager.coinmany.com/open-api/user/get/account",params,"utf-8");
+        String ss = HttpRequestUtil.URLGet("https://api.nr3d.cn/open-api/user/get/account",params,"utf-8");
         System.out.println(ss);
     }*/
 
@@ -110,7 +110,7 @@ public class demo {
         params.put("timestamp",timeStamp);
         params.put("signature",sin);
         params.put("memberId","127");
-        String ss = HttpRequestUtil.URLGet("https://manager.coinmany.com/open-api/user/account",params,"utf-8");
+        String ss = HttpRequestUtil.URLGet("https://api.nr3d.cn/open-api/user/account",params,"utf-8");
         System.out.println(ss);
     }*/
 
@@ -148,7 +148,7 @@ public class demo {
         params.put("price","500");
         params.put("amount","1");
         params.put("type","LIMIT_PRICE");
-        String ss = HttpRequestUtil.URLPost("https://manager.coinmany.com/open-api/user/add_order",params,"utf-8");
+        String ss = HttpRequestUtil.URLPost("https://api.nr3d.cn/open-api/user/add_order",params,"utf-8");
         System.out.println(ss);
     }*/
 
@@ -175,7 +175,7 @@ public class demo {
         params.put("timestamp",timeStamp);
         params.put("signature",sin);
         params.put("orderId","E156030921685859");
-        String ss = HttpRequestUtil.URLGet("https://manager.coinmany.com/open-api/user/query/order_detail",params,"utf-8");
+        String ss = HttpRequestUtil.URLGet("https://api.nr3d.cn/open-api/user/query/order_detail",params,"utf-8");
         System.out.println(ss);
     }*/
 
@@ -206,7 +206,7 @@ public class demo {
         params.put("memberId","127");
         params.put("pageNum","1");
         params.put("pageSize","2");
-        String ss = HttpRequestUtil.URLPost("https://manager.coinmany.com/open-api/user/query/order",params,"utf-8");
+        String ss = HttpRequestUtil.URLPost("https://api.nr3d.cn/open-api/user/query/order",params,"utf-8");
         System.out.println(ss);
     }*/
 
@@ -235,7 +235,7 @@ public class demo {
         params.put("signature", sin);
         params.put("orderId", "E156031055002212");
         params.put("memberId", "127");
-        String ss = HttpRequestUtil.URLGet("https://manager.coinmany.com/open-api/user/cancel_order", params, "utf-8");
+        String ss = HttpRequestUtil.URLGet("https://api.nr3d.cn/open-api/user/cancel_order", params, "utf-8");
         System.out.println(ss);
     }*/
 
@@ -262,7 +262,7 @@ public class demo {
         params.put("timestamp", timeStamp);
         params.put("signature", sin);
         params.put("memberId", "127");
-        String ss = HttpRequestUtil.URLPost("https://manager.coinmany.com/open-api/user/history", params, "utf-8");
+        String ss = HttpRequestUtil.URLPost("https://api.nr3d.cn/open-api/user/history", params, "utf-8");
         System.out.println(ss);
     }*/
 
@@ -276,7 +276,7 @@ public class demo {
         params.put("symbol", "ETH/USDT");
         params.put("period", "1min");
         params.put("size", "100");
-        String ss = HttpRequestUtil.URLPost("https://manager.coinmany.com/open-api/open/history/kline", params, "utf-8");
+        String ss = HttpRequestUtil.URLPost("https://api.nr3d.cn/open-api/open/history/kline", params, "utf-8");
         System.out.println(ss);
     }*/
 
@@ -285,7 +285,7 @@ public class demo {
      * */
     /*public static void main(String[] args) {
         Map<String, String> params = new TreeMap<>();
-        String ss = HttpRequestUtil.URLGet("https://manager.coinmany.com/open-api/open/symbol_thumb", params, "utf-8");
+        String ss = HttpRequestUtil.URLGet("https://api.nr3d.cn/open-api/open/symbol_thumb", params, "utf-8");
         System.out.println(ss);
     }*/
 
@@ -296,7 +296,7 @@ public class demo {
         Map<String, String> params = new TreeMap<>();
         params.put("symbol", "ETH/USDT");
         params.put("size", "100");
-        String ss = HttpRequestUtil.URLPost("https://manager.coinmany.com/open-api/open/trade_plate", params, "utf-8");
+        String ss = HttpRequestUtil.URLPost("https://api.nr3d.cn/open-api/open/trade_plate", params, "utf-8");
         System.out.println(ss);
     }*/
 
@@ -307,7 +307,7 @@ public class demo {
         Map<String, String> params = new TreeMap<>();
         params.put("symbol", "ETH/USDT");
         params.put("size", "100");
-        String ss = HttpRequestUtil.URLPost("https://manager.coinmany.com/open-api/open/trade_history", params, "utf-8");
+        String ss = HttpRequestUtil.URLPost("https://api.nr3d.cn/open-api/open/trade_history", params, "utf-8");
         System.out.println(ss);
     }*/
 
