@@ -5,10 +5,7 @@ import java.net.URLEncoder;
 import java.time.Instant;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.StringJoiner;
-import java.util.TreeMap;
+import java.util.*;
 
 public class demo {
 
@@ -91,7 +88,7 @@ public class demo {
      *
      */
 
-   /* public static void main(String[] args) throws Exception {
+    /*public static void main(String[] args) throws Exception {
 
         String s = Instant.now().atZone(ZONE_GMT).format(DT_FORMAT);
         String timeStamp = URLEncoder.encode(s, "UTF-8").replaceAll("\\+", "%20");
@@ -183,7 +180,7 @@ public class demo {
      * 根据用户id和交易对查询当前委托订单列表
      * */
 
-    /*public static void main(String[] args)throws Exception {
+   /* public static void main(String[] args)throws Exception {
 
         String s = Instant.now().atZone(ZONE_GMT).format(DT_FORMAT);
         String timeStamp = URLEncoder.encode(s, "UTF-8").replaceAll("\\+", "%20");
@@ -242,29 +239,40 @@ public class demo {
     /*
     *查询用户历史委托
     * */
+    public static void main(String[] args)throws Exception {
 
-   /* public static void main(String[] args)throws Exception {
-
+        /*
+        * period
+        * 0-week
+        * 1-month
+        * 2-2month
+        * */
         String s = Instant.now().atZone(ZONE_GMT).format(DT_FORMAT);
         String timeStamp = URLEncoder.encode(s, "UTF-8").replaceAll("\\+", "%20");
         System.out.println(timeStamp);
         Map map = new TreeMap();
-        map.put("memberId", "127");
-        String sin = createSignature("POST", "/open-api/user/history",
-                "fa922d49-****-****-****-3bfd95392918", timeStamp,
+        map.put("memberId", "48");
+        map.put("symbol", "QTUM/BC");
+        map.put("period", "0");
+        map.put("pageSize", "100");
+        String sin = createSignature("POST", "/open-api/user/exchange/personal/history",
+                "3cee3126-****-****-****-1b244db57f22", timeStamp,
                 map,
-                "a4d1bb15-****-****-****-1bb11360af81");
+                "a6caf627-****-****-****-1306dd84b79c");
         System.out.println(sin);
         Map<String, String> params = new TreeMap<>();
-        params.put("accessKeyId", "fa922d49-****-****-****-3bfd95392918");
+        params.put("accessKeyId", "3cee3126-****-****-****-1b244db57f22");
         params.put("signatureMethod", SIGNATURE_METHOD);
         params.put("signatureVersion", SIGNATURE_VERSION);
         params.put("timestamp", timeStamp);
         params.put("signature", sin);
-        params.put("memberId", "127");
-        String ss = HttpRequestUtil.URLPost("https://api.nr3d.cn/open-api/user/history", params, "utf-8");
+        params.put("memberId", "48");
+        params.put("symbol", "QTUM/BC");
+        params.put("period", "0");
+        params.put("pageSize", "100");
+        String ss = HttpRequestUtil.URLPost("https://api.nr3d.cn/open-api/user/exchange/personal/history", params, "utf-8");
         System.out.println(ss);
-    }*/
+    }
 
    /**
     *
